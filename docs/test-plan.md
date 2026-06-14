@@ -1,6 +1,6 @@
 # Test Plan & Test Case Design
 
-Project: **ProShop (MERN e-commerce)** — IT 303 SVVT
+Project: **ProShop (MERN e-commerce)** — IT 506 SVVT
 System under test: forked, self-hosted ProShop. Public live URL in the README.
 
 ## 1. Strategy overview

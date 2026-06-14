@@ -1,4 +1,4 @@
-# ProShop — Software Verification, Validation & Testing (IT 303)
+# ProShop — Software Verification, Validation & Testing (IT 506)
 
 A verification & testing project built on **ProShop**, an open-source
 **MERN** (MongoDB, Express, React, Node) e-commerce platform. This repository

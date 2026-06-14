@@ -2,7 +2,7 @@ MIT License
 
 ProShop is an open-source MERN e-commerce platform originally created by
 Brad Traversy (https://github.com/bradtraversy/proshop-v2) and distributed
-under the MIT License. This repository is a fork created for the IT 303
+under the MIT License. This repository is a fork created for the IT 506
 Software Verification, Validation and Testing course project; it adds testing
 infrastructure, bug fixes, and documentation on top of the original source.
 
