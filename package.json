@@ -12,7 +12,15 @@
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "generate-toc": "markdown-toc -i readme.md"
+    "generate-toc": "markdown-toc -i readme.md",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:unit": "vitest run backend/__tests__/unit",
+    "test:integration": "vitest run backend/__tests__/integration",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint backend",
+    "lint:fix": "eslint backend --fix",
+    "test:e2e": "playwright test"
   },
   "author": "Brad Traversy",
   "license": "MIT",
@@ -27,9 +35,15 @@
     "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
     "@types/express": "^4.17.17",
+    "@vitest/coverage-v8": "^2.1.9",
     "concurrently": "^7.6.0",
+    "eslint": "^9.15.0",
     "markdown-toc": "^1.2.0",
-    "nodemon": "^2.0.21"
+    "mongodb-memory-server": "^11.2.0",
+    "nodemon": "^2.0.21",
+    "supertest": "^7.2.2",
+    "vitest": "^2.1.9"
   }
 }

@@ -8,10 +8,13 @@ const getProducts = asyncHandler(async (req, res) => {
   const pageSize = process.env.PAGINATION_LIMIT;
   const page = Number(req.query.pageNumber) || 1;
 
+  // BUG-001 fix: escape regex metacharacters in the user-supplied keyword.
+  // Passing raw input into $regex let an invalid pattern (e.g. "(") crash the
+  // request with HTTP 500, and was a regex-injection/ReDoS risk.
   const keyword = req.query.keyword
     ? {
         name: {
-          $regex: req.query.keyword,
+          $regex: req.query.keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
           $options: 'i',
         },
       }

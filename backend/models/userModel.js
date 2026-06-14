@@ -34,12 +34,16 @@ userSchema.methods.matchPassword = async function (enteredPassword) {
 
 // Encrypt password using bcrypt
 userSchema.pre('save', async function (next) {
+  // Code-quality fix: return early so an unchanged password is never re-hashed,
+  // and call next() once at the end. The original mixed next() with the async
+  // resolution and lacked a `return`, risking a double-hash on profile updates.
   if (!this.isModified('password')) {
-    next();
+    return next();
   }
 
   const salt = await bcrypt.genSalt(10);
   this.password = await bcrypt.hash(this.password, salt);
+  next();
 });
 
 const User = mongoose.model('User', userSchema);
