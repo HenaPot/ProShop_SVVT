@@ -6,7 +6,7 @@ forks the original application and adds a full testing stack: static analysis,
 unit, integration and system (end-to-end) tests, coverage analysis, a
 documented bug fix with a regression test, and CI.
 
-- **Live app:**
+- **Live app:** https://proshop-svvt.onrender.com
 - **Author of SVVT work:** Hena Potogija
 - **Original application:** [bradtraversy/proshop-v2](https://github.com/bradtraversy/proshop-v2) by Brad Traversy — **MIT License** (see [`LICENSE`](./LICENSE) and the preserved [`docs/ORIGINAL_PROSHOP_README.md`](./docs/ORIGINAL_PROSHOP_README.md)).
 
